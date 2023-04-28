@@ -9,7 +9,19 @@
 
 
 ///Libros que tienen mas de 250 pags y tienen en el titulo la palabra in action
-ImprimirValores(queries.LibrosConMasde250PagConPalabrasInAction());
+//ImprimirValores(queries.LibrosConMasde250PagConPalabrasInAction());
+
+//all libros tienen estatus
+//Console.WriteLine($" Todos los libros tienen status? - {queries.TodosLosLibrosTienenStatus()}");
+
+
+//Si algun libro fue publicado en 2005
+//Console.WriteLine($" Algun libro fue publicado en 2005? - {queries.SiAlgunLibroFuePublicado2005()}");
+
+//Libros de python
+ImprimirValores(queries.LibrosdePython());
+
+
 
 //toda la coleccion
 void ImprimirValores(IEnumerable<Book> listadelibros)
