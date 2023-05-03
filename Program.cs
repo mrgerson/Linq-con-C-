@@ -34,7 +34,14 @@
 //ImprimirValores(queries.TerceryCuartoLibroDeMas400Pag());
 
 //tres primeros libros filtrados con Select
-ImprimirValores(queries.TresPrimeroLibrosDeLaCollecion());
+//ImprimirValores(queries.TresPrimeroLibrosDeLaCollecion());
+
+//cantidad de libros que tienen entre 200 y 600 paginas
+//Console.WriteLine($"Cantidad de libros que tiene entre 200 y 600 pag. {queries.CantidadDeLibrosEntre200y600Pag()}");
+
+//cantidad de libros que tienen entre 200 y 500 paginas
+Console.WriteLine($"Cantidad de libros que tiene entre 200 y 500 pag. {queries.CantidadDeLibrosEntre200y500Pag()}");
+
 
 
 
