@@ -71,8 +71,11 @@
 //ImprimirGrupo(queries.LibrosDespuesdel2000AgrupadosporAno());
 
 //Diccionario de libros agrupados por primera letra del titulo
-var diccionarioLookup = queries.DiccionariosDeLibrosPorLetra();
-ImprimirDiccionario(diccionarioLookup, 'P');
+//var diccionarioLookup = queries.DiccionariosDeLibrosPorLetra();
+//ImprimirDiccionario(diccionarioLookup, 'P');
+
+// libros filtradaor con la clausula join 
+ImprimirValores(queries.LibrosDespuesdel2005conmasde500Pags());
 
 
 
