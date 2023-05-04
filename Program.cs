@@ -65,7 +65,10 @@
 //Console.WriteLine(queries.TitulosDeLibrosDespuesDel2015Concatenados());
 
 //el promedio de caracteres del los titulos de los libros
-Console.WriteLine($"promedio caracteres de los titulos: {queries.PromedioCaracteresTitulo()}");
+//Console.WriteLine($"promedio caracteres de los titulos: {queries.PromedioCaracteresTitulo()}");
+
+//Libros publicados a partir del 2000 agrupados por ano
+ImprimirGrupo(queries.LibrosDespuesdel2000AgrupadosporAno());
 
 
 
@@ -82,5 +85,18 @@ void ImprimirValores(IEnumerable<Book> listadelibros)
 
         Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate);
 
+    }
+}
+void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
+{
+    foreach(var grupo in ListadeLibros)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"Grupo: { grupo.Key }");
+        Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+        foreach(var item in grupo)
+        {
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
+        }
     }
 }
